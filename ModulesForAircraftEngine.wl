@@ -176,7 +176,7 @@ mredPar[pratio_,\[Eta]_,\[Gamma]_]:= Sqrt[(2 \[Gamma])/(\[Gamma]-1)](2^(\[Gamma]
 mred[massflow_,T0_,p0_,rgas_,area_]:=(massflow Sqrt[rgas T0])/(p0 area);
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*International Standard Atmosphere (ISA) Model*)
 
 
@@ -249,7 +249,7 @@ pstd[h_]:=100*((44331.514-h)/11880.516)^(1./0.1902632);
 \[Delta]0std[h_,M0_]:=\[Delta]std[h](1+0.2 M0^2)^(\[Gamma]/(\[Gamma]-1))/.\[Gamma]->1.4;
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Mission Analysis*)
 
 
@@ -312,7 +312,7 @@ cd0[commercial_,fighter_,Mach_]:=Piecewise[{{Piecewise[{{0.017,Mach<=0.8},{0.035
 \[Alpha]TJmil[h_,M0_,TR_]:=Piecewise[{{\[Alpha]9[h,M0,TR],\[Theta]0std[h,M0]<=TR},{\[Alpha]10[h,M0,TR],\[Theta]0std[h,M0]>TR}}];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Cycle Analysis*)
 
 
